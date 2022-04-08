@@ -65,7 +65,10 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier
                 .padding(8.dp, 4.dp)
                 .fillMaxWidth()
-                .clickable { onClick(index) }
+                .clickable {
+                    onClick(index)
+                    usersViewModel.getUserInfo(user.login)
+                }
                 .height(110.dp), shape = RoundedCornerShape(8.dp), elevation = 4.dp
         ) {
             Surface(color = backgroundColor) {
@@ -122,6 +125,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
     }
 }
