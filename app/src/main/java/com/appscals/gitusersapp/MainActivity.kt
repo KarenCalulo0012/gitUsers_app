@@ -116,7 +116,7 @@ class MainActivity : ComponentActivity() {
                                 .padding(4.dp)
                         )
                         Text(
-                            text = user.url,
+                            text = user.htmlUrl,
                             style = MaterialTheme.typography.subtitle2,
                             maxLines = 2,
                             overflow = TextOverflow.Ellipsis
